@@ -1,0 +1,172 @@
+.book-article-section {
+    position: relative;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(12, 1fr);
+
+    .images-section, .description {
+        grid-column: span 8;
+
+        @media screen and (max-width:960px) {
+            grid-column: span 12;
+        }
+    }
+
+    .images-section {
+        margin-bottom: 1rem;
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: repeat(2, 1fr);
+
+        img {
+            width: 100%;
+            height: 100%;
+            grid-column: span 1;
+
+            @media screen and (max-width:960px) {
+                grid-column: span 2;
+            }
+        }
+    }
+
+    .order-infos {
+        grid-column: span 4;
+        padding: 1rem;
+
+        @media screen and (max-width:960px) {
+            grid-column: span 12;
+        }
+        .order-infos-content {
+            position: sticky;
+            top: 1rem;
+            display: flex;
+            flex-direction: column;
+
+            h2 {
+                font-weight: 300;
+                font-size: 2.3rem;
+
+            }
+
+            .price {
+                border-bottom: 1px solid #cecece;
+            }
+
+            h3 {
+                font-weight: 300;
+                padding: 1rem 0;
+            }
+
+            .quantity-number {
+                display: flex;
+                justify-content: space-between;
+                gap: 0.5rem;
+                align-items: center;
+                padding: 0 1rem; 
+                width: 100px;
+                text-align: center;
+                border: 1px solid #cecece;
+
+                h3 {
+                    padding: 0.5rem 0;
+                }
+            }
+
+            .button {
+                color: black;
+                font-family: "Raleway", sans-serif;
+                text-align: center;
+                font-size: 0.8rem;
+                background-color: rgb(187, 187, 187);
+                margin: 2rem 0;
+                padding: 1rem;
+        }
+
+        .share-section {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        }
+    }
+
+    .description {
+        padding: 1rem 0;
+        border-top: 1px solid #cecece;
+        border-bottom: 1px solid #cecece;
+
+        .title {
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 1rem;
+            font-family: "Raleway", sans-serif;
+            margin-top: 2rem;
+            margin-bottom: 2rem;          
+        }
+
+        h4 {
+            font-weight: 400;
+            font-size: 1rem;
+            font-family: "Raleway", sans-serif;
+            padding: 0 1rem;
+        }
+    }
+
+
+
+}
+
+// Carrousel
+.carrousel-books {
+    padding: 0 0 5rem 0;
+    a {
+        padding: 0.8rem;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        text-transform: uppercase;
+        overflow: visible;
+        p {
+            font-weight: 400;
+            padding: 1rem 0 0.1rem 0;
+            font-size: 0.8rem;
+        }
+        h4 {
+            font-weight: 400;
+            font-family: "Raleway", sans-serif;
+            font-size: 1.1rem;
+        }
+    }
+
+    .image-container {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .secondary-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.3s all ease-in-out;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    a:hover .secondary-image {
+        scale: 110%;
+        opacity: 1;
+    }
+
+    a:hover {
+        border: 1px solid black;
+    }
+}

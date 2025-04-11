@@ -1,0 +1,145 @@
+// Large Version
+.header-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .header-top {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            padding: 1rem 0;
+            width:30%;
+        }
+    }
+    .header-bottom {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5rem;
+    }
+
+    @media screen and (max-width:960px) {
+        display: none;
+    }
+
+    
+}
+
+.icon-menu {
+    fill: black;
+    color: black;
+}
+
+.nav-bar {
+    font-family: "Raleway", sans-serif;
+    display: flex;
+    flex-direction: row;
+    // padding: 1rem 1rem;
+    gap: 4rem;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .nav {
+        position:relative;
+        padding: 1rem 1.5rem;
+    }
+    .subnav {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: #f8f6f3;
+        z-index: 3;
+        padding: 1rem 1.5rem;
+        border: 1px solid black;
+        bottom: 0;
+        left: 0;
+        translate: 0 100%;
+        transition: 0.3s all ease-in-out;
+    }
+
+    .nav:hover .subnav {
+        display: flex;
+    }
+
+    .subnav:hover {
+        display: flex;
+    }
+
+    a {
+        position: relative;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: black;
+        white-space: nowrap;
+    }
+
+    a::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: -2px;
+        left: 0;
+        background-color: black;
+        opacity: 0;
+        transition: 0.3s all ease-in-out;
+    }
+    
+    a:hover::before {
+        opacity: 1;
+    }
+}
+
+// Small Version
+.menu-small-version {
+    position: relative;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .icon-menu {
+        i {
+            font-size: 1.3rem;
+        }
+    }
+
+    @media screen and (min-width:960px) {
+        display: none;
+    }
+}
+
+.menu-small-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-small-logo img {
+    height: 40px; /* ajuste selon tes besoins */
+    width: auto;
+}
+
+.icons-section {
+    display: flex;
+    gap: 1rem;
+}
+
